@@ -99,7 +99,9 @@ const styles = StyleSheet.create({
     },
     path: {
         height: "100%",
-        textAlignVertical: "center",
+        lineHeight: ITEM_HEIGHT,
+        // textAlignVertical: "center",
+        // alignItems: "center",
     },
     checkIcon: {
         padding: rpx(14),

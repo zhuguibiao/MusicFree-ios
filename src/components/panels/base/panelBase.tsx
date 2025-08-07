@@ -3,12 +3,14 @@ import useOrientation from "@/hooks/useOrientation";
 import rpx, { vh } from "@/utils/rpx";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
+    Platform,
     BackHandler,
     DeviceEventEmitter,
     KeyboardAvoidingView,
     NativeEventSubscription,
     Pressable,
     StyleSheet,
+    Dimensions,
 } from "react-native";
 import Animated, {
     Easing,
@@ -21,7 +23,6 @@ import Animated, {
 } from "react-native-reanimated";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { panelInfoStore } from "../usePanel";
-import NativeUtils from "@/native/utils";
 
 const ANIMATION_EASING: EasingFunction = Easing.out(Easing.exp);
 const ANIMATION_DURATION = 250;
@@ -47,7 +48,7 @@ export default function (props: IPanelBaseProps) {
         positionMethod = "bottom",
     } = props;
     const snapPoint = useSharedValue(0);
-
+   
     const colors = useColors();
     const [loading, setLoading] = useState(true); // 是否处于弹出状态
     const timerRef = useRef<any>();
@@ -164,7 +165,7 @@ export default function (props: IPanelBaseProps) {
                     height: vh(100) - safeAreaInsets.top,
                     bottom: 0,
                 } : {
-                    top: positionMethod === "top" ? (NativeUtils.getWindowDimensions().height + safeAreaInsets.top) - height - safeAreaInsets.bottom : undefined,
+                    top: positionMethod === "top" ? (Dimensions.get("window").height + safeAreaInsets.top) - height - safeAreaInsets.bottom : undefined,
                     bottom: positionMethod === "bottom" ? 0 : undefined,
                     height: height,
                 },
@@ -193,7 +194,9 @@ export default function (props: IPanelBaseProps) {
             ) : (
                 <KeyboardAvoidingView
                     style={style.kbContainer}
-                    behavior={keyboardAvoidBehavior || "position"}>
+                    behavior={Platform.OS === "ios" ? 
+                        orientation === "horizontal" ? keyboardAvoidBehavior: "position"
+                        : ( keyboardAvoidBehavior || "position")}>
                     {panelBody}
                 </KeyboardAvoidingView>
             )}
@@ -225,6 +228,7 @@ const style = StyleSheet.create({
         zIndex: 15010,
     },
     kbContainer: {
+        // flex: 1,
         zIndex: 15010,
     },
 });

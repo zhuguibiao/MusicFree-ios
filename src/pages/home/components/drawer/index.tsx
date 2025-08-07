@@ -7,15 +7,13 @@ import { showDialog } from "@/components/dialogs/useDialog";
 import { showPanel } from "@/components/panels/usePanel";
 import { useI18N } from "@/core/i18n";
 import { ROUTE_PATH, useNavigate } from "@/core/router";
-import TrackPlayer from "@/core/trackPlayer";
 import { checkUpdateAndShowResult } from "@/hooks/useCheckUpdate.ts";
-import NativeUtils from "@/native/utils";
 import rpx from "@/utils/rpx";
 import { useScheduleCloseCountDown } from "@/utils/scheduleClose";
 import timeformat from "@/utils/timeformat";
 import { DrawerContentScrollView } from "@react-navigation/drawer";
 import React, { memo } from "react";
-import { BackHandler, Platform, StyleSheet, View } from "react-native";
+import { Platform, StyleSheet, View } from "react-native";
 import { default as DeviceInfo, default as deviceInfoModule } from "react-native-device-info";
 
 const ITEM_HEIGHT = rpx(108);
@@ -195,30 +193,6 @@ function HomeDrawer(props: any) {
                 </View>
 
                 <Divider />
-                <ListItem
-                    withHorizontalPadding
-                    onPress={() => {
-                        // 仅安卓生效
-                        BackHandler.exitApp();
-                    }}>
-                    <ListItem.ListItemIcon
-                        icon={"home-outline"}
-                        width={rpx(48)}
-                    />
-                    <ListItem.Content title={t("sidebar.backToDesktop")} />
-                </ListItem>
-                <ListItem
-                    withHorizontalPadding
-                    onPress={async () => {
-                        await TrackPlayer.reset();
-                        NativeUtils.exitApp();
-                    }}>
-                    <ListItem.ListItemIcon
-                        icon={"power-outline"}
-                        width={rpx(48)}
-                    />
-                    <ListItem.Content title={t("sidebar.exitApp")} />
-                </ListItem>
             </DrawerContentScrollView>
         </>
     );

@@ -15,7 +15,7 @@ import { useNavigation } from "@react-navigation/native";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Pressable, StyleSheet, View } from "react-native";
 import {
-    ExternalStorageDirectoryPath,
+    LibraryDirectoryPath,
     exists,
     getAllExternalFilesDirs,
     readDir,
@@ -88,14 +88,14 @@ export default function FileSelector() {
                             }
                         } else {
                             setCurrentPath({
-                                path: ExternalStorageDirectoryPath,
+                                path: LibraryDirectoryPath,
                                 parent: null,
                             });
                             return;
                         }
                     } catch {
                         setCurrentPath({
-                            path: ExternalStorageDirectoryPath,
+                            path: LibraryDirectoryPath,
                             parent: null,
                         });
                         return;

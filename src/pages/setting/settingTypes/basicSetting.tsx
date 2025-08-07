@@ -579,6 +579,7 @@ export default function BasicSetting() {
                             sectionListRef.current?.scrollToLocation({
                                 sectionIndex: index,
                                 itemIndex: 0,
+                                animated: true,
                             });
                         }}
                         activeOpacity={0.7}
@@ -588,6 +589,7 @@ export default function BasicSetting() {
                 )}
             />
             <SectionList
+                stickySectionHeadersEnabled={false}
                 sections={basicOptions}
                 renderSectionHeader={({ section }) => (
                     <View style={styles.sectionHeader}>
