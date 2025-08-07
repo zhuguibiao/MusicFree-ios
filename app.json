@@ -1,4 +1,10 @@
 {
   "name": "MusicFree",
-  "displayName": "MusicFree"
+  "displayName": "MusicFree",
+  "android": {
+    "package": "com.anonymous.musicfree"
+  },
+  "ios": {
+    "bundleIdentifier": "com.anonymous.musicfree"
+  }
 }
