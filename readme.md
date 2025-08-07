@@ -4,8 +4,8 @@
 > 基于MusiceFree修改的ios版本，提供暂且可用的ipa包
 
 ## ipa下载地址
-下载地址
-> 目前打包的支持 ios 15.1+
+[ipa下载地址](https://github.com/zhuguibiao/MusicFree-ios/releases)
+
 ## ipa安装
   1. AltStore 
      - [AltStore官网](https://faq.altstore.io/)
