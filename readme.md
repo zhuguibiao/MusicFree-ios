@@ -21,7 +21,7 @@
 - 代码版本: [v0.6.1](https://github.com/maotoumao/MusicFree/releases/tag/v0.6.1)
 - react-native: [0.76.5](https://reactnative.dev/docs/0.76/set-up-your-environment)
 - yarn: 1.22.22
-- cocoapods: 1.11.3 // brew install cocoapods
+- cocoapods: 1.16.2 // brew install cocoapods
 - node: 20.19.4
 - xcode: 16.4 
 
