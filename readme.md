@@ -15,6 +15,9 @@
      - [文字说明](https://telegra.ph/AltStore-%E4%B8%8B%E8%BC%89%E6%95%99%E5%AD%B8-03-02)
   3. ......
 
+## 插件
+- [ios B站插件](https://raw.githubusercontent.com/zhuguibiao/m-plugins/refs/heads/main/bilibili.js): 修复了原b站插件ios使用问题
+
 ## 开发
 
 ### 工具版本
