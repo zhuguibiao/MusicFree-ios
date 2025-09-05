@@ -13,7 +13,7 @@ import Slider from "@react-native-community/slider";
 import Color from "color";
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import RNFS from "react-native-fs";
+import { exists, unlink, copyFile } from "react-native-fs";
 import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 import ImageColors from "react-native-image-colors";
 import { launchImageLibrary } from "react-native-image-picker";
@@ -36,16 +36,11 @@ export default function Body() {
             const bgPath = `${pathConst.dataPath}background${uri.substring(
                 uri.lastIndexOf("."),
             )}`;
-            try {
-                const exists = await RNFS.exists(bgPath);
-                if (exists) {
-                    // 如果存在，先删除，在copy
-                    await RNFS.unlink(bgPath);
-                }
-                await RNFS.copyFile(uri, bgPath);
-            } catch (err) {
-                
+            const existsFile = await exists(bgPath);
+            if (existsFile) {
+                await unlink(bgPath);
             }
+            await copyFile(uri, bgPath);
             
             const colorsResult = await ImageColors.getColors(uri, {
                 fallback: "#ffffff",
