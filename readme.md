@@ -1,4 +1,9 @@
-# MusicFree
+# MusicFree-ios
+
+**中文** | [English](./readme-en.md)
+
+[![Download](https://img.shields.io/github/downloads/zhuguibiao/MusicFree-ios/total)](https://github.com/zhuguibiao/MusicFree-ios/releases)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/zhuguibiao/MusicFree-ios)
 
 **更多信息请参考原项目 <https://github.com/maotoumao/MusicFree#readme>**
 > 基于MusiceFree修改的ios版本，提供暂且可用的ipa包
@@ -7,7 +12,7 @@
 [ipa下载地址](https://github.com/zhuguibiao/MusicFree-ios/releases)
 
 ## ipa安装
-  1. AltStore 
+  1. AltStore (推荐)
      - [AltStore官网](https://faq.altstore.io/)
      - [文字说明](https://telegra.ph/AltStore-%E4%B8%8B%E8%BC%89%E6%95%99%E5%AD%B8-03-02)
   2. Sideloadly

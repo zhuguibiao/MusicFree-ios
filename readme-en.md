@@ -1,4 +1,9 @@
-# MusicFree
+# MusicFree-ios
+
+[中文](./readme.md) | **English**
+
+[![Download](https://img.shields.io/github/downloads/zhuguibiao/MusicFree-ios/total)](https://github.com/zhuguibiao/MusicFree-ios/releases)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/zhuguibiao/MusicFree-ios)
 
 **For more information, please refer to the original project: <https://github.com/maotoumao/MusicFree#readme>**
 > This is a modified iOS version based on MusicFree, providing a temporarily available IPA package.
