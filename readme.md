@@ -6,7 +6,7 @@
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/zhuguibiao/MusicFree-ios)
 
 **更多信息请参考原项目 <https://github.com/maotoumao/MusicFree#readme>**
-> 基于MusiceFree修改的ios版本，提供暂且可用的ipa包
+> 基于MusiceFree修改的ios版本，提供可用的ipa包
 
 ## ipa下载地址
 [ipa下载地址](https://github.com/zhuguibiao/MusicFree-ios/releases)
@@ -27,14 +27,14 @@
 
 ### 工具版本
 - 代码版本: [v0.6.1](https://github.com/maotoumao/MusicFree/releases/tag/v0.6.1)
-- react-native: [0.76.5](https://reactnative.dev/docs/0.76/set-up-your-environment)
+- react-native: [0.76.5](https://reactnative-archive-august-2025.netlify.app/docs/0.76/set-up-your-environment)
 - yarn: 1.22.22
 - cocoapods: 1.16.2 // brew install cocoapods
 - node: 20.19.4
 - xcode: 16.4 
 
 ### 生成ipa
-1. 搭建好 [react-native ios](https://reactnative.dev/docs/0.76/set-up-your-environment)  环境
+1. 搭建好 [react-native ios](https://reactnative-archive-august-2025.netlify.app/docs/0.76/set-up-your-environment)  环境
      - 安装 npm 和 pod 包 
      - Target> Signing & Capabilities 选项卡，配置个人证书，
      - Capabilities 添加Add Capability，启用 "Audio, Airplay, and Picture in Picture"（后台播放）

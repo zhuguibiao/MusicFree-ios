@@ -24,14 +24,14 @@
 
 ### Tool Versions
 - Code Version: [v0.6.1](https://github.com/maotoumao/MusicFree/releases/tag/v0.6.1)
-- react-native: [0.76.5](https://reactnative.dev/docs/0.76/set-up-your-environment)
+- react-native: [0.76.5](https://reactnative-archive-august-2025.netlify.app/docs/0.76/set-up-your-environment)
 - yarn: 1.22.22
 - cocoapods: 1.11.3 // brew install cocoapods
 - node: 20.19.4
 - xcode: 16.4
 
 ### Generate IPA
-1. Set up the [react-native iOS environment](https://reactnative.dev/docs/0.76/set-up-your-environment)
+1. Set up the [react-native iOS environment](https://reactnative-archive-august-2025.netlify.app/docs/0.76/set-up-your-environment)
    - Install npm and pod packages
    - Go to Target > Signing & Capabilities tab and configure your personal certificate
    - In Capabilities, click "Add Capability" and enable "Audio, Airplay, and Picture in Picture" (background playback)
